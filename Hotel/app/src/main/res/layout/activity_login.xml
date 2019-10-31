@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_login"/>
+
+
+    <RelativeLayout
+        android:layout_width="409dp"
+        android:layout_height="399dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/bg_card_login">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="68dp"
+                android:text="旅业管理平台"
+                android:textColor="@color/black_000"
+                android:textSize="30sp"/>
+
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/bg_et_login"
+                android:gravity="center_vertical"
+                android:hint="请输入账号"
+                android:maxLength="20"
+                android:paddingLeft="24dp"
+                android:singleLine="true"
+                android:textColor="@color/gray_22"
+                android:textColorHint="@color/gray_77"
+                android:textSize="16sp"/>
+
+
+            <EditText
+                android:id="@+id/et_pwd"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/bg_et_login"
+                android:gravity="center_vertical"
+                android:hint="请输入密码"
+                android:maxLength="20"
+                android:paddingLeft="24dp"
+                android:singleLine="true"
+                android:textColor="@color/gray_22"
+                android:textColorHint="@color/gray_77"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="33dp"
+                android:background="@drawable/bg_btn_login"
+                android:text="登录"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

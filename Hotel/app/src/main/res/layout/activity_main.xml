@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".mvp.main.MainActivity">
+
+    <include
+        layout="@layout/layout_title"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_below="@id/ll_title">
+
+
+        <TextView
+            android:id="@+id/tv_check_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一键入住"
+            android:textColor="@color/gray_55"
+            android:drawableTop="@mipmap/ic_check_in"
+            android:textSize="15sp"
+            android:drawablePadding="4dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:includeFontPadding="false"/>
+
+        <TextView
+            android:id="@+id/tv_check_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_check_in"
+            android:text="一键退房"
+            android:textColor="@color/gray_55"
+            android:drawableTop="@mipmap/ic_check_out"
+            android:textSize="15sp"
+            android:drawablePadding="4dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginLeft="17dp"
+            android:includeFontPadding="false"/>
+
+
+        <LinearLayout
+            android:layout_width="225dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/bg_et_search"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="12dp"
+                android:src="@mipmap/ic_search"
+                android:scaleType="center"/>
+
+            <EditText
+                android:id="@+id/et_search_room"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="12dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="搜索房间"
+                android:imeOptions="actionSearch"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textColor="@color/gray_22"
+                android:textColorHint="@color/gray_88"
+                android:textSize="16sp"
+                android:cursorVisible="false"/>
+
+            <ImageView
+                android:id="@+id/iv_clear_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_close_gray"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:scaleType="center"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_title_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_e2"
+        android:layout_below="@id/rl_search"/>
+
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/ctl_main"
+        android:layout_width="390dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/view_title_line"
+        android:layout_centerHorizontal="true"
+        app:tl_indicator_color="@color/blue_579"
+        app:tl_indicator_height="3dp"
+        app:tl_indicator_width="70dp"
+        app:tl_indicator_corner_radius="1dp"
+        app:tl_textSelectColor="@color/gray_22"
+        app:tl_textUnselectColor="@color/gray_88"
+        app:tl_textsize="17sp"
+        app:tl_textBold="SELECT">
+    </com.flyco.tablayout.CommonTabLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ctl_main"
+        android:layout_marginBottom="50dp"
+        android:background="@color/gray_f8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <View
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/bound_green"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:textSize="16sp"
+            android:textColor="@color/gray_55"
+            android:text="正常"/>
+
+        <View
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="39dp"
+            android:background="@drawable/bound_orange"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:text="警告"
+            android:textSize="16sp"
+            android:textColor="@color/gray_55"/>
+
+        <View
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="39dp"
+            android:background="@drawable/bound_red"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:text="报警"
+            android:textSize="16sp"
+            android:textColor="@color/gray_55"/>
+
+        <View
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="39dp"
+            android:background="@drawable/bound_gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:text="闲置"
+            android:textSize="16sp"
+            android:textColor="@color/gray_55"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
